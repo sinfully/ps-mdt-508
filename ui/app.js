@@ -3827,16 +3827,16 @@ $(document).ready(() => {
       name: "BLAINE COUNTY SHERIFF OFFICE",
     },
     tow: {
-      color1: "#423f39",
-      color2: "#8f7c3f",
+      color1: "#292f3e",
+      color2: "#14171e",
       color3: "#16537e",
-      color4: "#041f64",
+      color4: "#14171e",
       color5: "#0f3a58",
       color6: "#121f2c",
       color7: "#0f3a58",
       color8: "#2554cc",
-      color9: "#343434",
-      color10: "#8F741B",
+      color9: "#c4d4d4",
+      color10: "#1a0965",
       image: "https://media.discordapp.net/attachments/1141239572328628314/1209969468545966160/508-MASTER.png?ex=65f21561&is=65dfa061&hm=b0ef5dfb45cca6d645136df6516fb14abdad20691711b8e53784e9af082c9f39&=&format=webp&quality=lossless&width=608&height=608",
       name: "LOCAL 508 UNION",
     },
@@ -4143,6 +4143,7 @@ $(document).ready(() => {
         $(".manage-reports-title").css("margin-right", "auto").css("width", "95%");
       } else if (sentJob == "tow") { // Add this condition
         applyCustomTheme(customThemes.tow); // Assuming you have a theme for tow
+        $(".incidents-nav-item").hide(); // Hide the incident section
         // Add any other code for tow job here...
     }
 }
@@ -4239,7 +4240,7 @@ window.addEventListener("message", function (event) {
           } else if(unit.unitType == "lssd")  { bcsoCount++;
             activeInfoJob = `<div class="unit-job active-info-job-bcso">LSSD</div>`;
           } else if(unit.unitType == "sasp")  { saspCount++;
-            activeInfoJob = `<div class="unit-job active-info-job-sasp">508</div>`;
+            activeInfoJob = `<div class="unit-job active-info-job-sasp">SASP</div>`;
           } else if(unit.unitType == "sast")  { saspCount++;
             activeInfoJob = `<div class="unit-job active-info-job-sasp">SAST</div>`;
           } else if(unit.unitType == "sapr")  { saspCount++;
@@ -4257,7 +4258,7 @@ window.addEventListener("message", function (event) {
           dojCount++;
         }
           else if (TowJobs[unit.unitType] !== undefined) {  
-          activeInfoJob = `<div class="unit-job active-info-job-tow">TOW1</div>`
+          activeInfoJob = `<div class="unit-job active-info-job-tow">508</div>`
           towCount++;
         }
 
