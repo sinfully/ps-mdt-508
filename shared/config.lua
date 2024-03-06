@@ -74,8 +74,8 @@ Config.DojJobs = {
     ['judge'] = true
 }
 
-Config.TowJobs = {
-    ['tow'] = true
+Config['508tow'] = {
+    ['508tow'] = true
 }
 
 -- This is a workaround solution because the qb-menu present in qb-policejob fills in an impound location and sends it to the event. 
@@ -120,7 +120,7 @@ Config.LogPerms = {
     ['lssd'] = {
 		[4] = true,
 	},
-    ['tow'] = {
+    ['508tow'] = {
         [1] = true, -- Allows
 },
 }
@@ -433,7 +433,7 @@ end
 for index, value in pairs(Config.DojJobs) do
     Config.AllowedJobs[index] = value
 end
-for index, value in pairs(Config.TowJobs) do  -- Add this loop
+for index, value in pairs(Config['508tow']) do  -- Add this loop
     Config.AllowedJobs[index] = value
 end
 
@@ -794,8 +794,8 @@ function GetJobType(job)
         return 'ambulance'
     elseif Config.DojJobs[job] then
         return 'doj'
-    elseif Config.TowJobs[job] then  -- Add this line
-        return 'tow'
+    elseif Config['508tow'][job] then  -- Add this line
+        return '508tow'
     else
         return nil
     end

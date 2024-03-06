@@ -3826,7 +3826,7 @@ $(document).ready(() => {
       image: "img/BCSO.webp",
       name: "BLAINE COUNTY SHERIFF OFFICE",
     },
-    tow: {
+    508tow: {
       color1: "#292f3e",
       color2: "#14171e",
       color3: "#16537e",
@@ -4141,8 +4141,8 @@ $(document).ready(() => {
         $(".vehicle-information-title").css("margin-right", "auto").css("width", "95%");
         $(".manage-incidents-title ").css("margin-right", "auto")
         $(".manage-reports-title").css("margin-right", "auto").css("width", "95%");
-      } else if (sentJob == "tow") { // Add this condition
-        applyCustomTheme(customThemes.tow); // Assuming you have a theme for tow
+      } else if (sentJob == "508tow") { // Add this condition
+        applyCustomTheme(customThemes['508tow']); // Assuming you have a theme for tow
         $(".incidents-nav-item").hide(); // Hide the incident section
         // Add any other code for tow job here...
     }

@@ -42,7 +42,7 @@ function IsJobAllowedToMDT(job)
         return true
     elseif Config.DojJobs[job] then
         return true
-    elseif Config.TowJobs[job] then  -- Add this line
+    elseif Config['508tow'][job] then  -- Add this line
         return true
     else
         return false
